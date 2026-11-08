@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="لعبة تفاعلية لمراجعة لغتي للصف الرابع الابتدائي، الفترة الثانية">
+<meta name="theme-color" content="#f8f5fd"><title>مهمة لغتي | رابع ابتدائي</title>
+<style>
+:root{--ink:#241b39;--muted:#655b77;--primary:#542a91;--line:#e3d9ef;--white:#fff;--mint:#e2f5eb;--lav:#f0e8fb}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);background:radial-gradient(ellipse at 20% 10%,#e5f6ee,transparent 37%),radial-gradient(ellipse at 85% 0%,#eee3fc,transparent 55%),#f9f6fc;font:1rem/1.75 system-ui,Tahoma,Arial,sans-serif;min-height:100vh}
+button{font:inherit;cursor:pointer}button:focus-visible,summary:focus-visible{outline:3px solid #a15ada;outline-offset:4px}button:disabled{cursor:default}
+header,main,footer{width:min(1040px,calc(100% - 32px));margin:auto}header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:22px 0}.brand{display:flex;align-items:center;gap:9px;font-weight:850}.brand i{font-style:normal;background:var(--primary);color:white;padding:2px 9px;border-radius:9px}.badge{color:var(--primary);background:#fff;border:1px solid var(--line);border-radius:99px;padding:3px 12px;font-weight:700;font-size:.87rem}
+.hero{min-height:290px;display:grid;grid-template-columns:1.4fr 1fr;align-items:center;gap:22px;background:#25163e;color:white;border-radius:28px;padding:clamp(22px,5vw,48px);position:relative;overflow:hidden}.hero h1{font-size:clamp(2.45rem,7vw,4.6rem);line-height:1.12;margin:10px 0}.hero p{color:#eee1fb;margin:0 0 20px;max-width:38ch}.eyebrow{color:#d9c0fb;font-weight:750}.hero svg{width:100%;max-width:275px;margin:auto;display:block}
+.primary,.secondary{border:0;border-radius:13px;padding:9px 18px;font-weight:800}.primary{color:white;background:var(--primary)}.hero .primary{background:#d9f5e8;color:#221a35}.secondary{color:var(--primary);background:var(--lav)}
+.heading{margin:22px 0 9px}.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}.tile{background:white;color:var(--ink);border:1px solid var(--line);border-radius:16px;padding:12px;display:flex;align-items:center;gap:10px;text-align:right}.tile:hover,.choice:hover:not(:disabled){border-color:#8d61c0;background:#fbf8ff}.tile b{display:block}.tile small{color:var(--muted)}.number{background:var(--lav);color:var(--primary);border-radius:10px;padding:3px 9px;font-weight:800}.tile:nth-child(even) .number{background:var(--mint)}
+.panel{max-width:740px;margin:0 auto;padding:clamp(16px,4vw,32px);background:white;border:1px solid var(--line);border-radius:24px;box-shadow:0 16px 48px #43246512}.toolbar,.actions,.status{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.status{margin:12px 0;color:var(--muted);font-size:.93rem}progress{width:100%;height:9px;display:block;accent-color:var(--primary)}.panel h1{font-size:clamp(1.35rem,4vw,2rem);line-height:1.5;margin:17px 0}.choices{display:grid;gap:9px}.choice{display:flex;gap:10px;align-items:center;width:100%;text-align:right;background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:13px;padding:10px 12px;font-weight:650}.choice.wrong{background:#fff0ec;border-color:#d78978}.choice.right{background:#e5f7ed;border-color:#63a985}.feedback{min-height:1.8em;font-weight:750;margin:10px 0 4px}.feedback.error{color:#9c3222}.feedback.success{color:#1b6543}.support{margin:12px 0;border-radius:12px;background:#f6f0fc;padding:8px 12px;color:#493365}.support summary{cursor:pointer;font-weight:750}.support p{margin:8px 0}.result{background:var(--mint);padding:12px 14px;border-radius:14px}.result p{margin:4px 0}.reviewlist{padding-right:22px}.reviewlist li{margin:7px 0}footer{text-align:center;color:var(--muted);font-size:.85rem;padding:22px 0 16px}[hidden]{display:none!important}.focus-target:focus{outline:none}
+@media(max-width:650px){.hero{grid-template-columns:1fr auto;gap:8px}.hero svg{width:84px}.tiles{grid-template-columns:repeat(2,1fr)}.tile{padding:8px;gap:6px}.tile b{font-size:.93rem}}@media(max-width:375px){.hero svg{display:none}.hero{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="brand"><i aria-hidden="true">ل</i> نادي لغتي</div><span class="badge">رابع ابتدائي · الفترة الثانية</span></header>
+<main>
+<section id="home">
+<div class="hero">
+<div><div class="eyebrow">مراجعة تفاعلية · ٢٦ تحديًا</div><h1 tabindex="-1" class="focus-target" id="home-title">مهمّة لغتي</h1><p>ست محطات من الاستماع إلى أنواع الجمل. اختر إجابتك، وإذا أخطأت جرّب من جديد.</p><button class="primary" id="start">ابدأ الجولة الكاملة ←</button></div>
+<svg viewBox="0 0 280 220" aria-hidden="true"><circle cx="143" cy="109" r="91" fill="#3f2a5e"/><circle cx="143" cy="109" r="75" fill="none" stroke="#6d4d91" stroke-dasharray="3 7"/><path d="M140 165 Q102 138 52 153 V72 Q100 59 140 90 Q180 59 228 72 V153 Q178 138 140 165Z" fill="#d8c0fc" stroke="#160b29" stroke-width="6" stroke-linejoin="round"/><path d="M140 165 Q103 131 66 140 V66 Q103 53 140 88 Q177 53 214 66 V140 Q177 131 140 165Z" fill="#fdf8ff" stroke="#160b29" stroke-width="5" stroke-linejoin="round"/><path d="M140 90v72M82 87q23-3 42 12m-42 5q23-3 42 12m-42 5q23-3 42 12m73-46q-23-3-42 12m42 5q-23-3-42 12m42 5q-23-3-42 12" fill="none" stroke="#9b79be" stroke-width="4" stroke-linecap="round"/><path d="m220 25 6 13 13 6-13 6-6 13-6-13-13-6 13-6ZM54 164l5 10 10 5-10 5-5 10-5-10-10-5 10-5Z" fill="#a6e8cc"/><circle cx="245" cy="126" r="5" fill="#d8c0fc"/><circle cx="76" cy="37" r="5" fill="#a6e8cc"/></svg>
+</div>
+<h2 class="heading">اختر محطة للتدريب</h2><div class="tiles" id="tiles"></div>
+</section>
+<section class="panel" id="quiz" hidden>
+<div class="toolbar"><span class="badge" id="category"></span><button class="secondary" id="quit">المحطات</button></div>
+<div class="status"><span id="step"></span><span id="first"></span></div><progress id="bar" aria-label="تقدّم الجولة"></progress>
+<details class="support" id="story" hidden><summary>النص التدريبي للاستماع</summary><p>هذه صياغة تدريبية مبنية على أسئلة الورقة. يمكن للمعلم أو ولي الأمر قراءتها بصوتٍ عالٍ.</p><p>كان في القرية رسّام عجوز يرسم لوحات جميلة ويبيعها. قال عنه رجل فقير إنه غني بخيل، وغضب منه الناس لأنهم ظنّوا أنه لا يساعد الفقراء. ولم يهتمّ به أحد. وفي القرية جزّار اعتاد أن يوزّع اللحم على الفقراء. وبعد وفاة الرسام، توقف الجزّار عن توزيع اللحم. وعندما سأله الناس عن السبب، أخبرهم أن الرسام كان يعطيه المال ليشتري اللحم ويوزّعه على المحتاجين. عندها عرف الناس أنهم تسرّعوا في الحكم عليه.</p></details>
+<details class="support" id="classify" hidden><summary>اقرأ الفقرة</summary><p>عند وصولهم إلى المكان المحدد، جهّزت نورة بعض الفواكه والخضروات التي كانت أمها قد أعدّتها لهم، ليتناولوها في رحلتهم.</p></details>
+<h1 id="prompt" class="focus-target" tabindex="-1"></h1><div class="choices" id="choices"></div>
+<p id="feedback" class="feedback" role="status"></p><div class="actions"><button class="primary" id="next" hidden>السؤال التالي ←</button></div>
+</section>
+<section class="panel" id="finish" hidden>
+<span class="badge">نهاية الجولة</span><h1 id="finish-title" class="focus-target" tabindex="-1">أحسنت! أكملت الجولة</h1>
+<div class="result" id="result"></div><details class="support" id="mistakes" hidden><summary>الأسئلة التي احتجت فيها إلى محاولة ثانية</summary><ul class="reviewlist" id="mistake-list"></ul></details>
+<p class="actions"><button class="primary" id="replay">أعد الجولة ↻</button><button class="secondary" id="retry" hidden>درّبني على أخطائي</button><button class="secondary" id="back">كل المحطات</button></p>
+</section>
+</main><footer>مراجعة لغتي · الصف الرابع الابتدائي</footer>
+<script>
+const groups = [
+{title:'الاستماع والفهم',hint:'استمع ثم اختر',items:[
+['ماذا كان يرسم العجوز؟','لوحات جميلة','حيوانات رائعة','طيورًا جميلة'],
+['بماذا وصف الرجل الفقير الرسّام؟','غني بخيل','غني كريم','رسّام مبدع'],
+['لماذا غضب الناس من الرسّام؟','لاعتقادهم بأنه بخيل','لتوقف توزيع اللحم','لأنه كان يبيع لوحاته'],
+['لماذا توقف الجزّار عن توزيع اللحم على الفقراء؟','بسبب موت الرسّام','بسبب موت الجزّار','كراهيةً للفقراء'],
+['ما العلاقة بين «فقير» و«غني»؟','تضاد','ترادف','استفهام'],
+['ما الدرس المستفاد من القصة؟','لا تحكم على الظاهر','العلم خير من المال','الفقر خير من الغنى'],
+['«لم يهتمّ به أحد». ما نوع الجملة من حيث الإثبات والنفي؟','منفية','مثبتة','استفهامية']]},
+{title:'أقسام الكلمة',hint:'اسم أم فعل أم حرف؟',items:[
+['ما نوع كلمة «المكان»؟','اسم','فعل','حرف'],
+['ما نوع كلمة «نورة»؟','اسم','فعل','حرف'],
+['ما نوع كلمة «جهّزت»؟','فعل','اسم','حرف'],
+['ما نوع كلمة «كانت»؟','فعل','اسم','حرف'],
+['ما نوع كلمة «إلى»؟','حرف','اسم','فعل'],
+['ما نوع كلمة «في»؟','حرف','اسم','فعل']]},
+{title:'التحويل والإعراب',hint:'حوّل الجملة وأكمل الإعراب',items:[
+['حوّل «نام الطفل» إلى جملة اسمية.','الطفل نام.','نام الطفل.','ينام الطفل.'],
+['حوّل «القمر مضيء» إلى جملة فعلية.','أضاء القمر.','القمر أضاء.','القمر مضيء.'],
+['ما ركنا الجملة الاسمية؟','المبتدأ والخبر','الفعل والفاعل','الفعل والمفعول به'],
+['«العصافيرُ مزقزقةٌ». ما إعراب «العصافيرُ»؟','مبتدأ مرفوع وعلامة رفعه الضمة الظاهرة على آخره.','خبر مرفوع وعلامة رفعه الضمة الظاهرة على آخره.','مبتدأ منصوب وعلامة نصبه الفتحة الظاهرة على آخره.']]},
+{title:'المبتدأ والخبر',hint:'اختر الكلمتين بالترتيب',items:[
+['«الفصل نظيف». ما المبتدأ ثم الخبر؟','الفصل، نظيف','نظيف، الفصل','الفصل، الفصل'],
+['«طرق بلادي نظيفة». ما المبتدأ ثم الخبر؟','طرق، نظيفة','بلادي، نظيفة','نظيفة، طرق'],
+['«التصحر مشكلة عالمية». ما المبتدأ ثم الخبر؟','التصحر، مشكلة','التصحر، عالمية','مشكلة، عالمية']]},
+{title:'الإثبات والنفي',hint:'أثبت الجملة أو انفِها',items:[
+['اختر الصيغة المنفية من «الرياح قوية».','ليست الرياح قويةً.','كانت الرياح قويةً.','الرياح قويةٌ.'],
+['اختر الصيغة المثبتة من «ما نزل المطر».','نزل المطر.','لم ينزل المطر.','ما نزل المطر.'],
+['اختر الصيغة المنفية من «كان الجو صحوًا».','لم يكن الجو صحوًا.','كان الجو صحوًا.','أصبح الجو صحوًا.']]},
+{title:'أنواع الجمل',hint:'اسمية أم فعلية؟',items:[
+['«غابت الشمس». ما نوع الجملة؟','جملة فعلية','جملة اسمية'],
+['«الجو غائم». ما نوع الجملة؟','جملة اسمية','جملة فعلية'],
+['«ينصح الأب أبناءه». ما نوع الجملة؟','جملة فعلية','جملة اسمية']]}
+];
+const el = id => document.getElementById(id);
+const ar = n => n.toLocaleString('ar-SA');
+const bank = groups.flatMap((group, category) => group.items.map(([prompt, correct, ...alternatives]) => ({category,prompt,correct,alternatives})));
+let source, queue, index, score, missed, hadError, solved;
+function shuffle(items) {
+  const copy = [...items];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+function show(page) {
+  for (const name of ['home','quiz','finish']) el(name).hidden = name !== page;
+  window.scrollTo(0,0);
+}
+function start(items) {
+  source = items;
+  // Keep the listening activity together and mix the remaining skills.
+  queue = [...shuffle(items.filter(q => q.category === 0)), ...shuffle(items.filter(q => q.category !== 0))];
+  index = score = 0;
+  missed = [];
+  el('story').open = false;
+  el('classify').open = false;
+  show('quiz');
+  renderQuestion();
+}
+function renderQuestion() {
+  const q = queue[index];
+  hadError = solved = false;
+  el('category').textContent = groups[q.category].title;
+  el('step').textContent = 'السؤال ' + ar(index + 1) + ' من ' + ar(queue.length);
+  el('first').textContent = 'صح من أول محاولة · ' + ar(score);
+  el('bar').max = queue.length;
+  el('bar').value = index;
+  el('story').hidden = q.category !== 0;
+  el('classify').hidden = q.category !== 1;
+  el('prompt').textContent = q.prompt;
+  el('next').hidden = true;
+  el('feedback').className = 'feedback';
+  el('feedback').textContent = '';
+  el('choices').replaceChildren();
+  shuffle([q.correct,...q.alternatives]).forEach((answer, i) => {
+    const button = document.createElement('button');
+    const letter = document.createElement('span');
+    letter.className = 'number';
+    letter.setAttribute('aria-hidden','true');
+    letter.textContent = ['أ','ب','ج'][i];
+    button.className = 'choice';
+    button.append(letter, document.createTextNode(answer));
+    button.addEventListener('click', () => choose(q, answer, button));
+    el('choices').append(button);
+  });
+  el('prompt').focus();
+}
+function choose(q, answer, button) {
+  if (solved || button.disabled) return;
+  const feedback = el('feedback');
+  if (answer !== q.correct) {
+    hadError = true;
+    button.classList.add('wrong');
+    button.append(' ✕');
+    button.disabled = true;
+    feedback.className = 'feedback error';
+    feedback.textContent = 'هذه الإجابة غير صحيحة. جرّب خيارًا آخر.';
+    el('choices').querySelector('button:not(:disabled)').focus();
+    return;
+  }
+  solved = true;
+  if (hadError) missed.push(q);
+  else score++;
+  button.classList.add('right');
+  button.append(' ✓');
+  for (const choice of el('choices').children) choice.disabled = true;
+  feedback.className = 'feedback success';
+  feedback.textContent = hadError ? 'أحسنت، صحّحت إجابتك!' : 'إجابة صحيحة، أحسنت!';
+  el('bar').value = index + 1;
+  el('first').textContent = 'صح من أول محاولة · ' + ar(score);
+  el('next').textContent = index + 1 === queue.length ? 'شاهد نتيجتك ←' : 'السؤال التالي ←';
+  el('next').hidden = false;
+  el('next').focus();
+}
+function finish() {
+  show('finish');
+  const p = document.createElement('p');
+  p.textContent = 'أجبت عن ' + ar(score) + ' من ' + ar(queue.length) + ' إجابة صحيحة من أول محاولة.';
+  el('result').replaceChildren(p);
+  el('mistakes').hidden = el('retry').hidden = missed.length === 0;
+  el('mistakes').open = false;
+  el('mistake-list').replaceChildren(...missed.map(q => {
+    const li = document.createElement('li');
+    li.textContent = q.prompt + ' — ' + q.correct;
+    return li;
+  }));
+  el('finish-title').focus();
+}
+function home() {
+  show('home');
+  el('home-title').focus();
+}
+groups.forEach((group,i) => {
+  const tile = document.createElement('button');
+  tile.className = 'tile';
+  const number = document.createElement('span');
+  number.className = 'number';
+  number.textContent = ar(i + 1);
+  const label = document.createElement('span');
+  const title = document.createElement('b');
+  title.textContent = group.title;
+  const hint = document.createElement('small');
+  hint.textContent = group.hint;
+  label.append(title,hint);
+  tile.append(number,label);
+  tile.addEventListener('click', () => start(bank.filter(q => q.category === i)));
+  el('tiles').append(tile);
+});
+el('start').onclick = () => start(bank);
+el('quit').onclick = el('back').onclick = home;
+el('replay').onclick = () => start(source);
+el('retry').onclick = () => start(missed);
+el('next').onclick = () => {
+  if (!solved) return;
+  index++;
+  if (index === queue.length) finish();
+  else renderQuestion();
+};
+</script>
+</body>
+</html>
