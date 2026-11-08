@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#CFE9F7">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2090%2090%22%3E%3Cg%3E%3Ccircle%20cx%3D%2245%22%20cy%3D%2245%22%20r%3D%2238%22%20fill%3D%22%2386C2E6%22%20stroke%3D%22%23fff%22%20stroke-width%3D%224%22/%3E%3Cpath%20d%3D%22M20%2030c8-8%2020-8%2024-2%203%206-6%208-4%2014s-10%206-14%202-10-6-6-14z%22%20fill%3D%22%238DBB7A%22/%3E%3Cpath%20d%3D%22M50%2052c8-4%2018%200%2018%208s-8%2014-14%2010-8-14-4-18z%22%20fill%3D%22%238DBB7A%22/%3E%3Cpath%20d%3D%22M52%2018c6-2%2014%202%2014%206s-8%204-12%202-4-6-2-8z%22%20fill%3D%22%238DBB7A%22/%3E%3Cellipse%20cx%3D%2245%22%20cy%3D%2245%22%20rx%3D%2216%22%20ry%3D%2238%22%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222%22%20opacity%3D%22.7%22/%3E%3Cpath%20d%3D%22M8%2045h74%22%20stroke%3D%22%23fff%22%20stroke-width%3D%222%22%20opacity%3D%22.7%22/%3E%3C/g%3E%3C/svg%3E">
+<title>نجوم الدراسات الاجتماعية</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;900&display=swap" rel="stylesheet">
+<style>
+/* Concept: a calm cartoon nature sky for science review. Sky blue, sage, ivory, sunny yellow touches. Big touch targets for iPad. */
+:root{
+  --sky:#CFE9F7; --sky-d:#3C86B8; --sage:#DDEBD3; --sage-d:#5E8E5A; --ivory:#FFFBEF; --yellow:#FFD54A; --yellow-d:#E0A800;
+  --ink:#27403A; --muted:#5C7068; --ok:#2E8B57; --ok-bg:#E3F5EA; --bad:#C65A4B; --bad-bg:#FCEBE7; --line:#CFDDC9;
+  --font:'Cairo','Segoe UI',system-ui,-apple-system,'Geeza Pro','Arial',sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;min-height:100%}
+body{font-family:var(--font);font-weight:700;color:var(--ink);direction:rtl;line-height:1.6;
+  background:linear-gradient(180deg,#BFE3F6 0%,#E3F3FA 42%,var(--ivory) 100%) fixed;background-color:#E3F3FA;
+  padding-block:max(12px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-bottom));padding-inline:max(14px,env(safe-area-inset-right)) max(14px,env(safe-area-inset-left))}
+button{font:inherit;color:inherit;cursor:pointer;-webkit-appearance:none;appearance:none}
+button:focus-visible{outline:4px solid var(--yellow-d);outline-offset:3px}
+#app{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:14px;position:relative;z-index:1}
+.deco{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.deco svg{position:absolute}
+.top{display:flex;align-items:center;gap:10px;justify-content:space-between}
+.brand{font-weight:900;font-size:clamp(18px,3vw,24px);color:var(--sky-d)}
+.chipbtn{border:3px solid var(--line);background:#fff;border-radius:999px;padding:8px 18px;font-size:16px;min-height:44px;color:var(--muted);font-weight:700}
+.card{background:var(--ivory);border:4px solid #fff;border-radius:28px;box-shadow:0 10px 0 rgba(60,134,184,.12),0 18px 36px rgba(39,64,58,.14);padding:clamp(18px,3.4vw,34px)}
+.btn{display:block;width:100%;border:0;border-radius:22px;padding:16px 22px;min-height:68px;font-size:clamp(22px,3.4vw,28px);font-weight:900;text-align:center;
+  background:var(--sky-d);color:#fff;box-shadow:0 7px 0 #2A6590}
+.btn:active{transform:translateY(4px);box-shadow:0 3px 0 #2A6590}
+.btn.yellow{background:var(--yellow);color:#5A4300;box-shadow:0 7px 0 var(--yellow-d)}
+.btn.yellow:active{box-shadow:0 3px 0 var(--yellow-d)}
+.btn.sage{background:var(--sage-d);box-shadow:0 7px 0 #44703F}
+.btn.ghost{background:#fff;color:var(--sky-d);border:4px solid var(--sky);box-shadow:0 7px 0 var(--sky)}
+.btn[disabled]{background:#D9E2DC;color:#8DA096;box-shadow:0 7px 0 #C2CEC6;cursor:not-allowed}
+.stack{display:flex;flex-direction:column;gap:18px}
+/* welcome */
+.hero{text-align:center;padding-block:clamp(10px,3vw,26px)}
+.hero h1{margin:6px 0 4px;font-size:clamp(34px,7vw,58px);font-weight:900;line-height:1.25;color:var(--sky-d);text-shadow:0 3px 0 #fff}
+.hero p{margin:0 0 18px;font-size:clamp(18px,3vw,24px);color:var(--muted)}
+.badge{display:inline-block;background:var(--yellow);color:#5A4300;border-radius:999px;padding:4px 20px;font-size:clamp(16px,2.6vw,20px);box-shadow:0 4px 0 var(--yellow-d)}
+.info{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:6px 0 20px}
+.info span{background:var(--sage);border-radius:999px;padding:4px 16px;font-size:clamp(15px,2.4vw,18px);color:#3E6A3A}
+/* progress */
+.prog{display:flex;align-items:center;gap:12px}
+.prog b{font-size:clamp(18px,3vw,24px);white-space:nowrap;color:var(--sky-d)}
+.bar{flex:1;height:18px;border-radius:999px;background:#fff;border:3px solid var(--sky);overflow:hidden}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--yellow),#FFC107);border-radius:999px;transition:width .4s}
+.kind{display:inline-block;background:var(--sage);color:#3E6A3A;border-radius:999px;padding:2px 16px;font-size:clamp(15px,2.4vw,18px);margin-bottom:8px}
+.q{font-size:clamp(26px,4.6vw,38px);font-weight:900;line-height:1.7;margin:0 0 18px}
+.opts{display:flex;flex-direction:column;gap:14px}
+.opt{display:flex;align-items:center;gap:14px;border:4px solid var(--line);background:#fff;border-radius:22px;min-height:76px;padding:10px 18px;font-size:clamp(24px,4vw,32px);font-weight:900;text-align:right;width:100%;box-shadow:0 6px 0 var(--line)}
+.opt .lt{flex:none;width:46px;height:46px;border-radius:50%;background:var(--sky);color:var(--sky-d);display:grid;place-items:center;font-size:24px}
+.opt.sel{border-color:var(--sky-d);background:#EAF5FC;box-shadow:0 6px 0 var(--sky-d)}
+.opt.sel .lt{background:var(--sky-d);color:#fff}
+.opt.ok{border-color:var(--ok);background:var(--ok-bg);box-shadow:0 6px 0 var(--ok)}
+.opt.ok .lt{background:var(--ok);color:#fff}
+.opt.no{border-color:var(--bad);background:var(--bad-bg);box-shadow:0 6px 0 var(--bad)}
+.opt.no .lt{background:var(--bad);color:#fff}
+.opt[disabled]{cursor:default}
+.tf{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.tf .opt{justify-content:center;min-height:96px;font-size:clamp(28px,5vw,40px)}
+.tf .opt .lt{display:none}
+.fb{border-radius:22px;padding:14px 20px;font-size:clamp(20px,3.2vw,26px);animation:rise .35s ease-out}
+.fb.ok{background:var(--ok-bg);color:#1E6B40;border:3px solid var(--ok)}
+.fb.no{background:var(--bad-bg);color:#8A3A2E;border:3px solid var(--bad)}
+.fb h3{margin:0 0 4px;font-size:clamp(24px,3.8vw,32px);font-weight:900}
+.fb p{margin:4px 0 0;font-weight:700}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}}
+/* result */
+.score{text-align:center}
+.score .big{font-size:clamp(64px,16vw,120px);font-weight:900;line-height:1;color:var(--sky-d);text-shadow:0 4px 0 #fff}
+.score .big small{font-size:.38em;color:var(--muted);font-weight:700}
+.score h2{margin:8px 0;font-size:clamp(26px,4.6vw,38px);font-weight:900}
+.score p{margin:0 0 6px;font-size:clamp(19px,3vw,24px);color:var(--muted)}
+.note{background:var(--sage);border-radius:20px;padding:12px 18px;font-size:clamp(18px,2.8vw,22px);color:#3E6A3A;text-align:center}
+.modal{position:fixed;inset:0;background:rgba(39,64,58,.5);display:grid;place-items:center;padding:16px;z-index:20}
+.modal .box{background:#fff;border-radius:26px;padding:24px;max-width:460px;width:100%;text-align:center}
+.modal h3{margin:0 0 6px;font-size:28px}
+.modal p{margin:0 0 16px;font-size:20px;color:var(--muted)}
+.modal .row{display:flex;gap:12px}
+.modal .row .btn{min-height:60px;font-size:22px}
+.bank{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.opt.chip{justify-content:center;text-align:center;min-height:68px;font-size:clamp(20px,3.4vw,28px);padding:8px 10px}
+.bw{display:inline-block;min-width:3.4em;border-bottom:5px dashed var(--sky-d);color:transparent;line-height:1}
+.fw{color:var(--ok);border-bottom:4px solid var(--ok);padding-inline:.15em}
+@media(max-width:520px){.bank{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.tf{grid-template-columns:1fr}.opt{padding:8px 14px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="deco" aria-hidden="true">
+  <svg style="top:3%;inset-inline-start:4%" width="150" height="150" viewBox="0 0 150 150"><g stroke="#FFD54A" stroke-width="8" stroke-linecap="round"><path d="M75 8v18M75 124v18M8 75h18M124 75h18M28 28l13 13M109 109l13 13M122 28l-13 13M41 109l-13 13"/></g><circle cx="75" cy="75" r="36" fill="#FFE27A"/><circle cx="75" cy="75" r="36" fill="none" stroke="#FFD54A" stroke-width="4"/></svg>
+  <svg style="top:9%;inset-inline-end:3%;opacity:.9" width="190" height="90" viewBox="0 0 190 90"><path d="M40 78a26 26 0 0 1 4-51 36 36 0 0 1 68-6 30 30 0 0 1 40 26 24 24 0 0 1-4 31z" fill="#fff"/></svg>
+  <svg style="top:36%;inset-inline-start:-30px;opacity:.8" width="150" height="70" viewBox="0 0 190 90"><path d="M40 78a26 26 0 0 1 4-51 36 36 0 0 1 68-6 30 30 0 0 1 40 26 24 24 0 0 1-4 31z" fill="#fff"/></svg>
+  <svg style="bottom:0;left:0;width:100%;height:210px" viewBox="0 0 800 210" preserveAspectRatio="none"><path d="M0 120C120 70 220 70 330 110S560 150 800 80V210H0z" fill="#CFE3C4"/><path d="M0 160C160 120 300 130 440 160S690 180 800 140V210H0z" fill="#B9D6AB"/></svg>
+  <svg style="bottom:64px;inset-inline-end:3%" width="96" height="96" viewBox="0 0 96 96"><circle cx="48" cy="48" r="40" fill="#FFFBEF" stroke="#C9A25A" stroke-width="7"/><circle cx="48" cy="48" r="30" fill="none" stroke="#DCE7D4" stroke-width="3"/><path d="M48 16l8 32-8 6-8-6z" fill="#3C86B8"/><path d="M48 80l-8-32 8-6 8 6z" fill="#FFD54A"/><circle cx="48" cy="48" r="4" fill="#fff" stroke="#27403A" stroke-width="2"/></svg>
+  <svg style="bottom:62px;inset-inline-start:4%" width="110" height="120" viewBox="0 0 90 100"><g><circle cx="45" cy="45" r="38" fill="#86C2E6" stroke="#fff" stroke-width="4"/><path d="M20 30c8-8 20-8 24-2 3 6-6 8-4 14s-10 6-14 2-10-6-6-14z" fill="#8DBB7A"/><path d="M50 52c8-4 18 0 18 8s-8 14-14 10-8-14-4-18z" fill="#8DBB7A"/><path d="M52 18c6-2 14 2 14 6s-8 4-12 2-4-6-2-8z" fill="#8DBB7A"/><ellipse cx="45" cy="45" rx="16" ry="38" fill="none" stroke="#fff" stroke-width="2" opacity=".7"/><path d="M8 45h74" stroke="#fff" stroke-width="2" opacity=".7"/></g><path d="M45 83v10M30 96h30" stroke="#B58A4A" stroke-width="5" stroke-linecap="round"/></svg>
+<svg style="bottom:70px;inset-inline-start:26%" width="80" height="130" viewBox="0 0 80 130"><path d="M40 128c2-30 0-52-6-74" stroke="#A9773E" stroke-width="7" fill="none" stroke-linecap="round"/><g fill="#6FA06B"><path d="M34 54c-18-4-28 4-32 14 12-6 22-8 32-14z"/><path d="M34 54c-4-16-16-22-28-18 12 2 20 8 28 18z"/><path d="M34 54c8-16 22-18 34-12-12 0-24 4-34 12z"/><path d="M34 54c14-8 28-4 36 6-12-4-24-4-36-6z"/><path d="M34 54c-2-12 2-24 10-30 0 12-4 22-10 30z"/></g><circle cx="33" cy="60" r="4" fill="#8A5A2B"/><circle cx="39" cy="58" r="4" fill="#8A5A2B"/></svg><svg style="bottom:70px;inset-inline-end:22%" width="60" height="98" viewBox="0 0 80 130"><path d="M40 128c2-30 0-52-6-74" stroke="#A9773E" stroke-width="7" fill="none" stroke-linecap="round"/><g fill="#6FA06B"><path d="M34 54c-18-4-28 4-32 14 12-6 22-8 32-14z"/><path d="M34 54c-4-16-16-22-28-18 12 2 20 8 28 18z"/><path d="M34 54c8-16 22-18 34-12-12 0-24 4-34 12z"/><path d="M34 54c14-8 28-4 36 6-12-4-24-4-36-6z"/><path d="M34 54c-2-12 2-24 10-30 0 12-4 22-10 30z"/></g><circle cx="33" cy="60" r="4" fill="#8A5A2B"/><circle cx="39" cy="58" r="4" fill="#8A5A2B"/></svg><svg style="bottom:150px;inset-inline-end:2%;opacity:.92;transform:rotate(8deg)" width="130" height="100" viewBox="0 0 130 100"><rect x="14" y="14" width="102" height="72" rx="6" fill="#FBF0D2" stroke="#C9A25A" stroke-width="4"/><rect x="6" y="10" width="14" height="80" rx="7" fill="#E9D3A0" stroke="#C9A25A" stroke-width="3"/><rect x="110" y="10" width="14" height="80" rx="7" fill="#E9D3A0" stroke="#C9A25A" stroke-width="3"/><path d="M34 66c12-24 26 4 38-16s16-8 26-18" fill="none" stroke="#3C86B8" stroke-width="4" stroke-dasharray="2 9" stroke-linecap="round"/><path d="M92 26l10 10m0-10l-10 10" stroke="#C65A4B" stroke-width="5" stroke-linecap="round"/><circle cx="34" cy="66" r="5" fill="#5E8E5A"/></svg></div>
+<div id="app"></div>
+<script>
+/* ====================== DATA (12 questions from the review file) ====================== */
+const BANK=['السبب','هزيمة المسلمين','خرائط جوجل','بناء الطرق','الموقع','الطبيعة','الحركة','الشرق والغرب'];
+const Q=[
+ {t:'mc',q:'هو الذي يدرس مظاهر الأرض وطبيعتها وسكانها:',o:['المؤرخ','الاقتصادي','الجغرافي'],a:2,ex:'الجغرافي هو الذي يدرس مظاهر الأرض وطبيعتها وسكانها.'},
+ {t:'mc',q:'دراسة كل ما يتعلق بالكرة الأرضية وتكوينها وما يحدث على سطحها من ظواهر طبيعية وبشرية يسمى:',o:['المكان','الجغرافيا','الاقتصاد'],a:1,ex:'الجغرافيا هي دراسة الكرة الأرضية وتكوينها وما يحدث على سطحها من ظواهر طبيعية وبشرية.'},
+ {t:'mc',q:'من فوائد الخط الزمني:',o:['تسلسل العصور التاريخية','يُبعثر الأحداث','يُغير الأحداث'],a:0,ex:'الخط الزمني يساعدنا على معرفة تسلسل العصور التاريخية.'},
+ {t:'mc',q:'الجغرافي هو من يدرس:',o:['التاريخ','الرياضيات','الجغرافيا'],a:2,ex:'الجغرافي هو من يدرس الجغرافيا.'},
+ {t:'mc',q:'عدد الجهات الفرعية:',o:['ثلاث جهات','أربع جهات','خمس جهات'],a:1,ex:'الجهات الفرعية أربع جهات: الشمال الشرقي، والشمال الغربي، والجنوب الشرقي، والجنوب الغربي.'},
+ {t:'mc',q:'هو ما يؤدي إلى وقوع الحدث:',o:['السبب','الزمن','التعليم'],a:0,ex:'السبب هو ما يؤدي إلى وقوع الحدث.'},
+ {t:'mc',q:'وطني بعد التوحيد:',o:['حروب وخلافات','أمن وسلام','مناطق متفرقة'],a:1,ex:'صار وطني بعد التوحيد في أمن وسلام.'},
+ {t:'mc',q:'يصف الجغرافي شكل المكان مثل الجبال:',o:['الطبيعة','التاريخ','الاقتصاد'],a:0,ex:'يصف الجغرافي شكل المكان مثل الجبال، وهذا هو وصف الطبيعة.'},
+ {t:'mc',q:'السبب في هجرة المسلمين إلى الحبشة:',o:['اشتداد تعذيب قريش','حب التنقل','للتجارة'],a:0,ex:'هاجر المسلمون إلى الحبشة بسبب اشتداد تعذيب قريش لهم.'},
+ {t:'mc',q:'وطني يتكون من:',o:['٨ مناطق','١١ منطقة','١٣ منطقة'],a:2,ex:'تتكون المملكة العربية السعودية من ١٣ منطقة إدارية.'},
+ {t:'mc',q:'نتيجة مخالفة أمر النبي ﷺ في غزوة أحد:',o:['انتصار المسلمين','هزيمة المسلمين','توقف الحرب'],a:1,ex:'كانت نتيجة مخالفة أمر النبي ﷺ في غزوة أحد هزيمة المسلمين.'},
+ {t:'mc',q:'انتقال الناس ونقل البضائع من مكان إلى آخر:',o:['البيئة','الحركة','الموقع'],a:1,ex:'الحركة هي انتقال الناس ونقل البضائع من مكان إلى آخر.'},
+ {t:'mc',q:'تساعدنا الخرائط على:',o:['تحديد مواقع المنازل','نقل القصص','دراسة التاريخ'],a:0,ex:'تساعدنا الخرائط على تحديد المواقع، ومنها مواقع المنازل.'},
+ {t:'mc',q:'هي ما ينتج عن الحدث:',o:['الخرائط','التنمية','النتيجة'],a:2,ex:'النتيجة هي ما ينتج عن الحدث.'},
+ {t:'tf',q:'وطني بعد التوحيد مجتمعات مفككة.',a:false,fix:'وطني بعد التوحيد أمن وسلام، وليس مجتمعات مفككة.'},
+ {t:'tf',q:'رسم الإنسان الخرائط واستعملها قبل سنوات قليلة.',a:false,fix:'رسم الإنسان الخرائط واستعملها منذ زمن بعيد.'},
+ {t:'tf',q:'تنقسم الجغرافيا إلى فرعين: طبيعية وبشرية.',a:true,ex:'تنقسم الجغرافيا إلى فرعين: الجغرافيا الطبيعية والجغرافيا البشرية.'},
+ {t:'tf',q:'عندما ندرس الجغرافيا نتعرف على أماكن وبلدان مختلفة.',a:true,ex:'دراسة الجغرافيا تعرّفنا على أماكن وبلدان مختلفة.'},
+ {t:'tf',q:'جميع أحداث التاريخ تقوم على الترتيب الزمني وتتابعه.',a:true,ex:'أحداث التاريخ مرتبة زمنيًا ومتتابعة.'},
+ {t:'tf',q:'عدد الجهات الفرعية (عشر) جهات.',a:false,fix:'عدد الجهات الفرعية أربع جهات.'},
+ {t:'tf',q:'النتيجة هي ما ينتج عن الحدث.',a:true,ex:'النتيجة هي ما ينتج عن الحدث.'},
+ {t:'fill',q:'@@ انتقال الناس ونقل البضائع من مكان إلى آخر.',a:6},
+ {t:'fill',q:'من التقنيات الحديثة التي تساعدنا على معرفة المواقع @@.',a:2},
+ {t:'fill',q:'@@ من طرق تفاعل الإنسان مع المكان.',a:3},
+ {t:'fill',q:'@@ من الجهات الأصلية.',a:7},
+ {t:'fill',q:'@@ يصف الجغرافي شكل المكان مثل الجبال.',a:5},
+ {t:'fill',q:'نتيجة مخالفة أمر النبي ﷺ في غزوة أحد @@.',a:1},
+ {t:'fill',q:'@@ هو ما يؤدي إلى وقوع الحدث.',a:0}
+];
+const N=Q.length, LT=['أ','ب','ج'];
+const AR=n=>String(n).replace(/\d/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);
+/* ====================== STATE ====================== */
+const KEY='abtal-social-v1';
+const fresh=()=>({phase:'welcome',idx:0,ans:Array(N).fill(null),rev:null});
+let S=fresh();
+try{const r=localStorage.getItem(KEY);if(r){const p=JSON.parse(r);if(p&&Array.isArray(p.ans)&&p.ans.length===N)S=p}}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+const UI={sel:null,confirm:false};
+const $=s=>document.querySelector(s);
+const score=()=>S.ans.filter(a=>a&&a.ok).length;
+const wrongList=()=>S.ans.map((a,i)=>a&&!a.ok?i:-1).filter(i=>i>=0);
+const hasProgress=()=>S.phase!=='welcome'&&(S.idx>0||S.ans.some(Boolean)||S.phase!=='quiz');
+/* ====================== VIEWS ====================== */
+function topbar(){return `<header class="top"><div class="brand"><svg width="30" height="30" viewBox="0 0 90 90" aria-hidden="true" style="vertical-align:-6px;margin-inline-start:6px"><g><circle cx="45" cy="45" r="38" fill="#86C2E6" stroke="#fff" stroke-width="4"/><path d="M20 30c8-8 20-8 24-2 3 6-6 8-4 14s-10 6-14 2-10-6-6-14z" fill="#8DBB7A"/><path d="M50 52c8-4 18 0 18 8s-8 14-14 10-8-14-4-18z" fill="#8DBB7A"/><path d="M52 18c6-2 14 2 14 6s-8 4-12 2-4-6-2-8z" fill="#8DBB7A"/><ellipse cx="45" cy="45" rx="16" ry="38" fill="none" stroke="#fff" stroke-width="2" opacity=".7"/><path d="M8 45h74" stroke="#fff" stroke-width="2" opacity=".7"/></g></svg> نجوم الدراسات الاجتماعية</div>${S.phase==='welcome'?'':'<button class="chipbtn" data-act="ask">↻ محاولة جديدة</button>'}</header>`}
+function welcome(){
+  const resume=hasProgress();
+  return `<section class="card hero stack"><div><svg width="120" height="120" viewBox="0 0 90 90" aria-hidden="true" style="display:block;margin:0 auto 4px"><g><circle cx="45" cy="45" r="38" fill="#86C2E6" stroke="#fff" stroke-width="4"/><path d="M20 30c8-8 20-8 24-2 3 6-6 8-4 14s-10 6-14 2-10-6-6-14z" fill="#8DBB7A"/><path d="M50 52c8-4 18 0 18 8s-8 14-14 10-8-14-4-18z" fill="#8DBB7A"/><path d="M52 18c6-2 14 2 14 6s-8 4-12 2-4-6-2-8z" fill="#8DBB7A"/><ellipse cx="45" cy="45" rx="16" ry="38" fill="none" stroke="#fff" stroke-width="2" opacity=".7"/><path d="M8 45h74" stroke="#fff" stroke-width="2" opacity=".7"/></g></svg><span class="badge">مراجعة التكويني الثاني</span><h1>نجوم الدراسات الاجتماعية</h1><p>راجع ما تعلمته بهدوء وبسرعتك أنت</p>
+  <div class="info"><span>٢٨ سؤالًا</span><span>سؤال واحد في كل شاشة</span><span>بدون وقت</span></div></div>
+  ${resume?`<button class="btn yellow" data-act="resume">تابع من حيث توقفت</button><button class="btn ghost" data-act="start">ابدأ محاولة جديدة</button>`:`<button class="btn yellow" data-act="start">ابدأ المراجعة</button>`}</section>`}
+function qtext(q,checked){if(q.t!=='fill')return q.q;return q.q.replace('@@',checked?`<span class="fw">${BANK[q.a]}</span>`:'<span class="bw">______</span>')}
+function fullSentence(q){return q.q.replace('@@',BANK[q.a])}
+function questionScreen(qi,rec,label,pct){
+  const q=Q[qi],checked=!!rec,sel=checked?rec.sel:UI.sel;
+  let opts;
+  if(q.t==='mc'){
+    opts=`<div class="opts" role="radiogroup" aria-label="الخيارات">`+q.o.map((t,i)=>{
+      let c='';if(checked){if(i===q.a)c='ok';else if(i===sel)c='no'}else if(i===sel)c='sel';
+      return `<button class="opt ${c}" role="radio" aria-checked="${i===sel}" data-act="pick" data-v="${i}" ${checked?'disabled':''}><span class="lt">${LT[i]}</span><span>${t}</span></button>`}).join('')+`</div>`}
+  else if(q.t==='fill'){
+    opts=`<div class="bank" role="radiogroup" aria-label="بنك الكلمات">`+BANK.map((w,i)=>{let c='';if(checked){if(i===q.a)c='ok';else if(i===sel)c='no'}else if(i===sel)c='sel';
+      return `<button class="opt chip ${c}" role="radio" aria-checked="${i===sel}" data-act="pick" data-v="${i}" ${checked?'disabled':''}>${w}</button>`}).join('')+`</div>`}
+  else{
+    const mk=(v,t)=>{let c='';if(checked){if(v===q.a)c='ok';else if(v===sel)c='no'}else if(v===sel)c='sel';
+      return `<button class="opt ${c}" role="radio" aria-checked="${v===sel}" data-act="pick" data-v="${v}" ${checked?'disabled':''}>${t}</button>`};
+    opts=`<div class="tf" role="radiogroup" aria-label="صح أم خطأ">${mk(true,'صح ✓')}${mk(false,'خطأ ✗')}</div>`}
+  let fb='';
+  if(checked){
+    const last=(S.phase==='review'?S.rev.i+1>=S.rev.list.length:qi+1>=N);
+    if(rec.ok){fb=`<div class="fb ok" role="status"><h3>أحسنت! إجابة صحيحة ⭐</h3>${q.t==='tf'&&!q.a?`<p>التصحيح: ${q.fix}</p>`:`<p>${q.t==='fill'?fullSentence(q):q.ex}</p>`}</div>`}
+    else{
+      const right=q.t==='mc'?`الإجابة الصحيحة: ${q.o[q.a]}`:q.t==='fill'?`الإجابة الصحيحة: ${BANK[q.a]}`:(q.a?'الإجابة الصحيحة: العبارة صحيحة ✓':'الإجابة الصحيحة: العبارة خاطئة ✗');
+      fb=`<div class="fb no" role="status"><h3>محاولة جميلة، لنتعلم معًا</h3><p>${right}</p><p>${q.t==='tf'&&!q.a?'التصحيح: '+q.fix:q.t==='fill'?fullSentence(q):q.ex}</p></div>`}
+    fb+=`<button class="btn yellow" data-act="next" id="nextbtn">${last?(S.phase==='review'?'عرض نتيجة المراجعة':'عرض النتيجة'):'السؤال التالي'}</button>`;
+  }else fb=`<button class="btn" data-act="check" ${sel===null?'disabled':''}>تحقق من إجابتي</button>`;
+  return `<section class="card stack"><div class="prog"><b>${label}</b><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(pct)}"><i style="width:${pct}%"></i></div></div>
+  <div><span class="kind">${q.t==='mc'?'اختر الإجابة الصحيحة':q.t==='fill'?'اختر الكلمة المناسبة من بنك الكلمات':'صح أم خطأ؟'}</span><p class="q">${qtext(q,checked)}</p>${opts}</div>${fb}</section>`}
+function quiz(){const i=S.idx;return questionScreen(i,S.ans[i],`السؤال ${AR(i+1)} من ${AR(N)}`,(i+(S.ans[i]?1:0))/N*100)}
+function review(){const r=S.rev,qi=r.list[r.i];return questionScreen(qi,r.ans[qi]||null,`مراجعة الأخطاء ${AR(r.i+1)} من ${AR(r.list.length)}`,(r.i+(r.ans[qi]?1:0))/r.list.length*100)}
+function msgFor(s){const f=s/N;return s===N?['🏆','ما شاء الله! درجة كاملة','أجبت عن جميع الأسئلة إجابة صحيحة. أنت من نجوم الدراسات الاجتماعية!']:f>=.83?['🌟','ممتاز جدًا!','أداء رائع، أنت قريب جدًا من الإتقان.']:f>=.6?['👏','جيد جدًا!','أنت على الطريق الصحيح، وبقليل من المراجعة ستصل للأفضل.']:f>=.35?['🌱','بداية جيدة!','كل محاولة تقرّبك أكثر، فراجع أخطاءك وستتحسن.']:['💪','لا بأس، المراجعة تقوّيك','تعلّمنا معًا، وراجع الأخطاء ثم حاول مرة أخرى بكل ثقة.']}
+function result(afterReview){
+  const s=score(),w=wrongList(),[ic,h,p]=msgFor(s);
+  let extra='';
+  if(afterReview){const r=S.rev,ok=r.list.filter(i=>r.ans[i]&&r.ans[i].ok).length;extra=`<div class="note">في مراجعة الأخطاء أجبت صح عن ${AR(ok)} من ${AR(r.list.length)}. نتيجة محاولتك الأصلية تبقى كما هي.</div>`}
+  const btns=(w.length?`<button class="btn yellow" data-act="review">راجع أخطائي (${AR(w.length)})</button>`:'')+`<button class="btn ${w.length?'ghost':'yellow'}" data-act="start">أعد المراجعة كاملة</button>`;
+  return `<section class="card stack score"><div><div style="font-size:54px" aria-hidden="true">${ic}</div><div class="big">${AR(s)}<small> من ${AR(N)}</small></div><h2>${h}</h2><p>${p}</p></div>${extra}${btns}</section>`}
+function modal(){return UI.confirm?`<div class="modal" role="dialog" aria-modal="true"><div class="box"><h3>بدء محاولة جديدة؟</h3><p>سيُمسح تقدمك الحالي وتبدأ من السؤال الأول.</p><div class="row"><button class="btn" data-act="start">نعم، ابدأ</button><button class="btn ghost" data-act="cancel">إلغاء</button></div></div></div>`:''}
+function render(){
+  const v={welcome,quiz,review,result:()=>result(false),reviewdone:()=>result(true)}[S.phase]||welcome;
+  $('#app').innerHTML=topbar()+`<main>${v()}</main>`+modal();
+}
+/* ====================== ACTIONS ====================== */
+function go(){render();window.scrollTo({top:0,behavior:'auto'})}
+const ACT={
+ start(){S=fresh();S.phase='quiz';UI.sel=null;UI.confirm=false;save();go()},
+ resume(){UI.sel=null;go()},
+ ask(){UI.confirm=true;render()},
+ cancel(){UI.confirm=false;render()},
+ pick(el){const v=el.dataset.v;UI.sel=Q[currentIdx()].t==='tf'?v==='true':+v;render()},
+ check(){if(UI.sel===null)return;const qi=currentIdx(),q=Q[qi],rec={sel:UI.sel,ok:UI.sel===q.a};
+   if(S.phase==='review')S.rev.ans[qi]=rec;else S.ans[qi]=rec;save();render();const b=$('#nextbtn');b&&b.scrollIntoView({block:'nearest',behavior:'smooth'})},
+ next(){UI.sel=null;
+   if(S.phase==='review'){if(S.rev.i+1>=S.rev.list.length)S.phase='reviewdone';else S.rev.i++}
+   else{if(S.idx+1>=N)S.phase='result';else S.idx++}
+   save();go()},
+ review(){S.rev={list:wrongList(),i:0,ans:{}};S.phase='review';UI.sel=null;save();go()}
+};
+function currentIdx(){return S.phase==='review'?S.rev.list[S.rev.i]:S.idx}
+document.addEventListener('click',e=>{const el=e.target.closest('[data-act]');if(!el||el.disabled)return;const f=ACT[el.dataset.act];f&&f(el)});
+render();
+</script>
+</body>
+</html>
